@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhile"
+    tools:context=".fragment.NewsArticle">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/componente_6_3"
+        app:layout_constraintHeight_percent="0.24"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icons_8_expand_arrow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_black"
+        android:textSize="22sp"
+        android:textColor="#121212"
+        android:text="EDITORIAL NEWS"
+        app:layout_constraintTop_toTopOf="@id/imgBack"
+        app:layout_constraintLeft_toRightOf="@id/imgBack"
+        app:layout_constraintBottom_toBottomOf="@id/imgBack"
+        android:layout_marginLeft="19dp"
+        android:layout_marginBottom="7dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/cus_radius_left"
+        android:paddingLeft="18dp"
+        android:paddingTop="23dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgBack">
+
+        <LinearLayout
+            android:id="@+id/lnText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cus_textview_news"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="EDITORIAL"
+                    android:textColor="#222222"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:alpha="0.47"
+                android:fontFamily="@font/lato_regular"
+                android:text="CRYPTO NEWS"
+                android:textColor="#222222"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:alpha="0.47"
+                android:fontFamily="@font/lato_regular"
+                android:text="RAW MATERIAL"
+                android:textColor="#222222"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:alpha="0.44"
+                android:fontFamily="@font/lato_regular"
+                android:gravity="right"
+                android:text="ECONOMICS"
+                android:textColor="#222222"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="33dp"
+            android:layout_marginRight="23dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/raggruppa_16"
+            app:layout_constraintLeft_toLeftOf="@id/lnText"
+            app:layout_constraintTop_toBottomOf="@id/lnText" />
+
+        <TextView
+            android:id="@+id/tvCry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginRight="35dp"
+            android:alpha="0.62"
+            android:background="@drawable/cus_textview_news_article"
+            android:fontFamily="@font/raleway_medium"
+            android:text="CRYPTOCURRENCY"
+            android:textColor="#0a0909"
+            android:textSize="9sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgMain" />
+
+        <TextView
+            android:id="@+id/tvWhat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:background="#6021ea"
+            android:fontFamily="@font/raleway_black"
+            android:gravity="right"
+            android:paddingLeft="11dp"
+            android:paddingTop="3dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="4dp"
+            android:text="What is the future of\ncryptocurrencies?"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="@id/tvCry"
+            app:layout_constraintTop_toBottomOf="@id/tvCry" />
+
+        <ImageView
+            android:id="@+id/imgCalendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:src="@drawable/icons_8_calendar"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvWhat" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_light"
+            android:text="02 Set 2020"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@id/tvWhat"
+            app:layout_constraintLeft_toLeftOf="@id/imgCalendar" />
+
+        <TextView
+            android:id="@+id/tvStr1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="@string/str1"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@id/tvWhat"
+            android:layout_marginTop="30dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fontFamily="@font/lato_regular"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            android:text="@string/str2"
+            app:layout_constraintTop_toBottomOf="@id/tvStr1"
+            android:layout_marginTop="30dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

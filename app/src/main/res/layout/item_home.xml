@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:paddingBottom="18dp"
+    android:paddingTop="18dp">
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_black"
+        android:textSize="16sp"
+        android:textColor="#676767"
+        android:text="DOWN JONES" />
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="12sp"
+        android:textColor="#4d4d4d"
+        android:text="NYSE"
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/tvName"/>
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="12sp"
+        android:textColor="#676767"
+        android:text="10:44:45"
+        android:layout_below="@id/tvName"
+        android:layout_toRightOf="@id/tvAddress"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="5dp"/>
+    <TextView
+        android:id="@+id/tvNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_italic"
+        android:textSize="14sp"
+        android:textColor="#020202"
+        android:background="@drawable/cus_textview_home"
+        android:text="20.047,50"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:id="@+id/tvPercen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_regular"
+        android:textStyle="normal"
+        android:textSize="12sp"
+        android:textColor="#000000"
+        android:text="+203 (+1,04%)"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvNumber"/>
+</RelativeLayout>

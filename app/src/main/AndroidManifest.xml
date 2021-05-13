@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.exercise4">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".fragment.Customer"></activity>
+        <activity android:name=".fragment.NewsArticle" />
+        <activity android:name=".fragment.News" />
+        <activity android:name=".fragment.Coin" />
+        <activity android:name=".MainScreen" />
+        <activity android:name=".ConfirmPasswordChanged" />
+        <activity
+            android:name=".fragment.Home"
+            android:configChanges="orientation" />
+        <activity android:name=".Email" />
+        <activity android:name=".SignUp" />
+        <activity android:name=".Login" />
+        <activity android:name=".fragment.OnBoarding3" />
+        <activity android:name=".fragment.OnBoarding2" />
+        <activity android:name=".fragment.OnBoarding1" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
