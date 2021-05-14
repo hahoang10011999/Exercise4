@@ -7,142 +7,140 @@
     android:background="@color/colorWhile"
     tools:context=".fragment.OnBoarding1">
 
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <androidx.constraintlayout.widget.ConstraintLayout
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.06" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.96" />
+
+        <TextView
+            android:id="@+id/tvSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="39dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="Skip"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/glTop"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/gl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.7" />
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/glTop"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.06" />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="140dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/tracciato_865"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imgGirl" />
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/glBottom"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.96" />
+        <ImageView
+            android:id="@+id/imgGirl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="31dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/thegirl_onboarding1"
+            app:layout_constraintBottom_toTopOf="@id/gl"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSkip" />
 
-            <TextView
-                android:id="@+id/tvSkip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="39dp"
-                android:fontFamily="@font/lato_regular"
-                android:text="Skip"
-                android:textColor="#000000"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toTopOf="@id/glTop"
-                app:layout_constraintRight_toRightOf="parent" />
+        <TextView
+            android:id="@+id/tvStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="46dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/raleway_black"
+            android:text="Start to invest"
+            android:textColor="#3e3e3e"
+            android:textSize="28sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgGirl" />
+
+        <TextView
+            android:id="@+id/tvFuture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_black"
+            android:text="for your future!"
+            android:textColor="#3e3e3e"
+            android:textSize="28sp"
+            android:textStyle="normal"
+            app:layout_constraintLeft_toLeftOf="@id/tvStart"
+            app:layout_constraintTop_toBottomOf="@id/tvStart" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_light"
+            android:text="Ex totam praesentium incidunt aut."
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="@id/tvFuture"
+            app:layout_constraintTop_toBottomOf="@id/tvFuture" />
+
+        <LinearLayout
+            android:id="@+id/lnDotOnboarding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="46dp"
+            android:layout_marginBottom="66dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
 
             <ImageView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="33dp"
-                android:layout_marginTop="140dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/tracciato_865"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="@id/imgGirl" />
+                android:background="@drawable/this_page" />
 
             <ImageView
-                android:id="@+id/imgGirl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="31dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/thegirl_onboarding1"
-                app:layout_constraintBottom_toTopOf="@id/gl"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvSkip" />
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/dot" />
 
-            <TextView
-                android:id="@+id/tvStart"
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="46dp"
-                android:layout_marginTop="28dp"
-                android:fontFamily="@font/raleway_black"
-                android:text="Start to invest"
-                android:textColor="#3e3e3e"
-                android:textSize="28sp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imgGirl" />
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/dot" />
+        </LinearLayout>
 
-            <TextView
-                android:id="@+id/tvFuture"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/raleway_black"
-                android:text="for your future!"
-                android:textColor="#3e3e3e"
-                android:textSize="28sp"
-                android:textStyle="normal"
-                app:layout_constraintLeft_toLeftOf="@id/tvStart"
-                app:layout_constraintTop_toBottomOf="@id/tvStart" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/lato_light"
-                android:text="Ex totam praesentium incidunt aut."
-                android:textColor="#000000"
-                android:textSize="14sp"
-                app:layout_constraintLeft_toLeftOf="@id/tvFuture"
-                app:layout_constraintTop_toBottomOf="@id/tvFuture" />
-
-            <LinearLayout
-                android:id="@+id/lnDotOnboarding"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="46dp"
-                android:layout_marginBottom="66dp"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/this_page" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="6dp"
-                    android:background="@drawable/dot" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="6dp"
-                    android:background="@drawable/dot" />
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/btnNext"
-                android:layout_width="100dp"
-                android:layout_height="44dp"
-                android:layout_marginRight="51dp"
-                android:background="@drawable/gradian_next"
-                android:text="NEXT"
-                android:textColor="@color/colorWhile"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                android:layout_marginBottom="52dp"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="100dp"
+            android:layout_height="44dp"
+            android:layout_marginRight="51dp"
+            android:layout_marginBottom="52dp"
+            android:background="@drawable/gradian_next"
+            android:text="NEXT"
+            android:textColor="@color/colorWhile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
