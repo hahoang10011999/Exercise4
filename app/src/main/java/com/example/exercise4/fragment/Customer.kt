@@ -30,7 +30,10 @@ class Customer : Fragment() {
         adapter = CustomerAdapter(list)
         recyclerView.adapter = adapter
         back.setOnClickListener {
-            fragmentManager?.popBackStack()
+            val s = fragmentManager
+            if(s?.backStackEntryCount!= 0){
+                s?.popBackStack()
+            }
         }
         activity?.imgNews?.clearColorFilter()
         activity?.imgCoin?.clearColorFilter()

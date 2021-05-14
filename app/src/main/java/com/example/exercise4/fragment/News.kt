@@ -30,7 +30,10 @@ class News : Fragment(), NewsAdapter.OnItemClickListener {
         adapter = NewsAdapter(list, this)
         rvNews.adapter = adapter
         imgBack.setOnClickListener {
-            fragmentManager?.popBackStack()
+            val s = fragmentManager
+            if(s?.backStackEntryCount!= 0){
+                s?.popBackStack()
+            }
         }
         communicator = activity as Communicator
 

@@ -25,7 +25,10 @@ class Coin : Fragment() {
         }
         imgBack.setOnClickListener {
             val s = fragmentManager
-            s?.popBackStack()
+            if(s?.backStackEntryCount!= 0){
+                s?.popBackStack()
+            }
+
         }
 
         activity?.imgNews?.clearColorFilter()
