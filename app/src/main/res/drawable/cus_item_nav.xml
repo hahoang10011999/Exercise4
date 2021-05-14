@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" >
-    <size android:height="28dp"
-        android:width="43dp"/>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <size
+        android:width="43dp"
+        android:height="28dp" />
     <gradient
+        android:angle="270"
         android:endColor="#fd9feb"
-        android:startColor="#f21cc8"
-        android:angle="270"/>
-    <corners android:radius="14dp"/>
-    <padding android:top="2dp"
-        android:bottom="3dp"/>
+        android:startColor="#f21cc8" />
+    <corners android:radius="14dp" />
+    <padding
+        android:bottom="3dp"
+        android:top="2dp" />
 </shape>

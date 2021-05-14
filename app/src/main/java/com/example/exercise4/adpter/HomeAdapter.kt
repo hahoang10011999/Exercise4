@@ -23,7 +23,7 @@ class HomeAdapter(var list: MutableList<ItemHome>) : RecyclerView.Adapter<ViewHo
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.tvName.text = list.get(position).name +"\t"+ position.toString()
+        holder.tvName.text = list.get(position).name + "\t" + position.toString()
         holder.tvNumber.text = list.get(position).number
         holder.tvAddress.text = list.get(position).address
         holder.tvTime.text = list.get(position).time

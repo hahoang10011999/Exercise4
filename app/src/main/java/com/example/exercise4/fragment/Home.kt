@@ -30,7 +30,7 @@ class Home : Fragment() {
         super.onActivityCreated(savedInstanceState)
         layoutManager = LinearLayoutManager(context)
         rvHome.layoutManager = layoutManager
-        var divider = DividerItemDecoration(activity,layoutManager.orientation)
+        var divider = DividerItemDecoration(activity, layoutManager.orientation)
         rvHome.addItemDecoration(divider)
         addItem()
         adapter = HomeAdapter(list1)

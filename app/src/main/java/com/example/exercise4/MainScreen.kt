@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_main_screen.*
 
 class MainScreen : AppCompatActivity(), Communicator {
     lateinit var listTag: ArrayList<String>
-    var f:Fragment? = null
+    var f: Fragment? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_screen)
@@ -79,7 +79,7 @@ class MainScreen : AppCompatActivity(), Communicator {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        if (supportFragmentManager.backStackEntryCount ==1){
+        if (supportFragmentManager.backStackEntryCount == 1) {
             f = supportFragmentManager.findFragmentById(R.id.container)
         }
         if (supportFragmentManager.backStackEntryCount == 0) {
@@ -149,7 +149,7 @@ class MainScreen : AppCompatActivity(), Communicator {
                 finish()
             }
             al.show()
-        }else{
+        } else {
             when {
                 supportFragmentManager.findFragmentById(R.id.container) is Coin -> {
                     imgNews.clearColorFilter()

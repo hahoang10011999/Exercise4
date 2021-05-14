@@ -11,7 +11,7 @@ class ConfirmPasswordChanged : AppCompatActivity() {
         setContentView(R.layout.activity_confirm_password_changed)
         btnLogin.setOnClickListener {
             finish()
-            val intent = Intent(this,Login::class.java)
+            val intent = Intent(this, Login::class.java)
             startActivity(intent)
         }
     }
@@ -19,7 +19,7 @@ class ConfirmPasswordChanged : AppCompatActivity() {
     override fun onBackPressed() {
         super.onBackPressed()
         this.finish()
-        val intent = Intent(this,Email::class.java)
+        val intent = Intent(this, Email::class.java)
         startActivity(intent)
     }
 }

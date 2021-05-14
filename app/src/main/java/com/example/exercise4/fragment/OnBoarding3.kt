@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_on_boarding3.view.*
 import java.util.prefs.Preferences
 
 class OnBoarding3 : Fragment() {
-    lateinit var sharedPreferences:SharedPreferences
+    lateinit var sharedPreferences: SharedPreferences
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,7 +29,7 @@ class OnBoarding3 : Fragment() {
             s?.popBackStack()
         }
         view.btnStart.setOnClickListener {
-            editor.putString("check","true")
+            editor.putString("check", "true")
             editor.commit()
             this.activity?.finish()
             val intent = Intent(this.activity, Login::class.java)

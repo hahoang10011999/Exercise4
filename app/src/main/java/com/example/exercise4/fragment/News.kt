@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_main_screen.*
 import kotlinx.android.synthetic.main.activity_news.*
 
-class News : Fragment(),NewsAdapter.OnItemClickListener {
+class News : Fragment(), NewsAdapter.OnItemClickListener {
     lateinit var adapter: NewsAdapter
     lateinit var list: MutableList<ItemNews>
     lateinit var layoutManager: LinearLayoutManager
@@ -27,7 +27,7 @@ class News : Fragment(),NewsAdapter.OnItemClickListener {
         layoutManager = LinearLayoutManager(context)
         rvNews.layoutManager = layoutManager
         addItem()
-        adapter = NewsAdapter(list,this)
+        adapter = NewsAdapter(list, this)
         rvNews.adapter = adapter
         imgBack.setOnClickListener {
             fragmentManager?.popBackStack()

@@ -2,58 +2,62 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:paddingTop="18dp"
+    android:paddingBottom="18dp">
 
-    android:paddingBottom="18dp"
-    android:paddingTop="18dp">
     <TextView
         android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/raleway_black"
-        android:textSize="16sp"
+        android:text="DOWN JONES"
         android:textColor="#676767"
-        android:text="DOWN JONES" />
+        android:textSize="16sp" />
+
     <TextView
         android:id="@+id/tvAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/lato_regular"
-        android:textSize="12sp"
-        android:textColor="#4d4d4d"
-        android:text="NYSE"
+        android:layout_below="@id/tvName"
         android:layout_marginTop="4dp"
-        android:layout_below="@id/tvName"/>
+        android:fontFamily="@font/lato_regular"
+        android:text="NYSE"
+        android:textColor="#4d4d4d"
+        android:textSize="12sp" />
+
     <TextView
         android:id="@+id/tvTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/lato_regular"
-        android:textSize="12sp"
-        android:textColor="#676767"
-        android:text="10:44:45"
         android:layout_below="@id/tvName"
-        android:layout_toRightOf="@id/tvAddress"
+        android:layout_marginLeft="5dp"
         android:layout_marginTop="4dp"
-        android:layout_marginLeft="5dp"/>
+        android:layout_toRightOf="@id/tvAddress"
+        android:fontFamily="@font/lato_regular"
+        android:text="10:44:45"
+        android:textColor="#676767"
+        android:textSize="12sp" />
+
     <TextView
         android:id="@+id/tvNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/lato_italic"
-        android:textSize="14sp"
-        android:textColor="#020202"
+        android:layout_alignParentRight="true"
         android:background="@drawable/cus_textview_home"
+        android:fontFamily="@font/lato_italic"
         android:text="20.047,50"
-        android:layout_alignParentRight="true"/>
+        android:textColor="#020202"
+        android:textSize="14sp" />
+
     <TextView
         android:id="@+id/tvPercen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/lato_regular"
-        android:textStyle="normal"
-        android:textSize="12sp"
-        android:textColor="#000000"
-        android:text="+203 (+1,04%)"
+        android:layout_below="@id/tvNumber"
         android:layout_alignParentRight="true"
-        android:layout_below="@id/tvNumber"/>
+        android:fontFamily="@font/lato_regular"
+        android:text="+203 (+1,04%)"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        android:textStyle="normal" />
 </RelativeLayout>
