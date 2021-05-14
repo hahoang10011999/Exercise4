@@ -15,6 +15,7 @@ import com.example.exercise4.adpter.CustomerAdapter
 import com.example.exercise4.adpter.NewsAdapter
 import kotlinx.android.synthetic.main.activity_coin.*
 import kotlinx.android.synthetic.main.activity_customer.*
+import kotlinx.android.synthetic.main.activity_main_screen.*
 import kotlinx.android.synthetic.main.activity_news.*
 
 class Customer : Fragment() {
@@ -31,6 +32,16 @@ class Customer : Fragment() {
         back.setOnClickListener {
             fragmentManager?.popBackStack()
         }
+        activity?.imgNews?.clearColorFilter()
+        activity?.imgCoin?.clearColorFilter()
+
+        activity?.imgCustomer?.setColorFilter(resources.getColor(R.color.colorWhile))
+        activity?.imgHome?.setColorFilter(R.color.colorN)
+
+        activity?.imgCustomer?.setBackgroundResource(R.drawable.cus_item_nav)
+        activity?.imgCoin?.background = null
+        activity?.imgNews?.background = null
+        activity?.imgHome?.background = null
     }
 
     override fun onCreateView(

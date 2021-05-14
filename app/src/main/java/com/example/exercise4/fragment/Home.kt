@@ -18,6 +18,7 @@ import com.example.exercise4.R
 import com.example.exercise4.SwipeToDelete
 import com.example.exercise4.adpter.HomeAdapter
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_main_screen.*
 
 class Home : Fragment() {
     lateinit var list: MutableList<ItemHome>
@@ -54,6 +55,16 @@ class Home : Fragment() {
 
         var itemTouchHelper = ItemTouchHelper(SwipeToDelete(adapter))
         itemTouchHelper.attachToRecyclerView(rvHome)
+
+        activity?.imgHome?.clearColorFilter()
+        activity?.imgNews?.clearColorFilter()
+        activity?.imgCustomer?.clearColorFilter()
+        activity?.imgCoin?.clearColorFilter()
+
+        activity?.imgHome?.setBackgroundResource(R.drawable.cus_item_nav)
+        activity?.imgCoin?.background = null
+        activity?.imgNews?.background = null
+        activity?.imgCustomer?.background = null
     }
 
     override fun onCreateView(

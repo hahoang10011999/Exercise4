@@ -14,6 +14,7 @@ import com.example.exercise4.R
 import com.example.exercise4.adpter.HomeAdapter
 import com.example.exercise4.adpter.NewsAdapter
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_main_screen.*
 import kotlinx.android.synthetic.main.activity_news.*
 
 class News : Fragment(),NewsAdapter.OnItemClickListener {
@@ -32,6 +33,17 @@ class News : Fragment(),NewsAdapter.OnItemClickListener {
             fragmentManager?.popBackStack()
         }
         communicator = activity as Communicator
+
+        activity?.imgCustomer?.clearColorFilter()
+        activity?.imgCoin?.clearColorFilter()
+
+        activity?.imgNews?.setColorFilter(resources.getColor(R.color.colorWhile))
+        activity?.imgHome?.setColorFilter(R.color.colorN)
+
+        activity?.imgNews?.setBackgroundResource(R.drawable.cus_item_nav)
+        activity?.imgCoin?.background = null
+        activity?.imgCustomer?.background = null
+        activity?.imgHome?.background = null
     }
 
     override fun onCreateView(
